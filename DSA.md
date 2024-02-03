@@ -1,5 +1,5 @@
 🔥Service based Companies:
-Language basics (Java/C++/Python)
+Language basics (Java/C++/Python/JavaScript)
 Arrays/2D Arrays
 Strings
 Searching & Sorting
@@ -9,7 +9,7 @@ Trees/BST
 Basic Graphs
 
 🔥Product based Companies:
-Language basics (Java/C++/Python)
+Language basics (Java/C++/Python/JavaScript)
 Arrays/2D Arrays
 Strings
 Searching & Sorting
