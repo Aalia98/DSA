@@ -11,8 +11,8 @@ for(let i=0;i<freq.length;i++) {
 
 // using hashmap
 
-// let freqCount = {};
-// for(let i = 0; i < name.length; i++) {
-//     freqCount[name[i]] = (freqCount[name[i]] || 0) + 1;
-// }
-// console.log(freqCount);
+let freqCount = {};
+for(let i = 0; i < name.length; i++) {
+    freqCount[name[i]] = (freqCount[name[i]] || 0) + 1;
+}
+console.log(freqCount);
