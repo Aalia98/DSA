@@ -56,6 +56,7 @@ const isPrime = num => {
     return ![...Array(num).keys()].slice(2).some(i => num % i === 0);
 }
 
+
 console.log(isPrime(2)); // true
 console.log(isPrime(3)); // true
 console.log(isPrime(4)); // false
