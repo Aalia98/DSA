@@ -1,0 +1,113 @@
+<!-- TODO: Method 1: Using template literals -->
+
+<h1 style="color: green">
+    GeeksforGeeks
+</h1>
+
+<b>
+    How to create multi-line
+    strings in JavaScript?
+</b>
+
+<div class="multiline"></div>
+
+<p>
+    Click on the button to
+    insert multiline text
+</p>
+
+<button onclick="showMultiline()">
+    Click here
+</button>
+
+<script type="text/javascript">
+    function showMultiline() {
+        multilineString =
+            `<div>
+                <h3>This is the heading</h3>
+                <p>
+                    This is a paragraph. This uses
+                    template literals that were
+                    added in ES6 of JavaScript
+                </p>
+            </div>`
+        
+        document.querySelector('.multiline').innerHTML
+                = multilineString;
+    }
+</script>
+
+<!-- TODO: Method 2: Using the backslash to escape the literal newlines -->
+
+<h1 style="color: green">
+    GeeksforGeeks
+</h1>
+
+<b>
+    How to create multi-line
+    strings in JavaScript?
+</b>
+
+<div class="multiline"></div>
+
+<p>
+    Click on the button to
+    insert multiline text
+</p>
+
+<button onclick="showMultiline()">
+    Click here
+</button>
+
+<script type="text/javascript">
+    function showMultiline() {
+        multilineString =
+            "<div> \
+                <h3>This is the heading</h3> \
+                <p>This is a paragraph \
+                This uses backslashes in place\
+                of new lines</p> \
+            </div>"
+        
+        document.querySelector('.multiline').innerHTML
+                = multilineString;
+    }
+</script>
+
+<!-- TODO: Method 3: Concatenating the individual strings together. -->
+
+<h1 style="color: green">
+    GeeksforGeeks
+</h1>
+
+<b>
+    How to create multi-line
+    strings in JavaScript?
+</b>
+
+<div class="multiline"></div>
+
+<p>
+    Click on the button to
+    insert multiline text
+</p>
+
+<button onclick="showMultiline()">
+    Click here
+</button>
+
+<script type="text/javascript">
+    function showMultiline() {
+        multilineString =
+            "<div>" +
+                "<h3>This is the heading</h3>" +
+                "<p>This is a paragraph" +
+                "This uses simple concatenation " +
+                "of strings for every line</p> " +
+            "</div>"
+        
+        document.querySelector('.multiline').innerHTML
+                = multilineString;
+    }
+</script>
+

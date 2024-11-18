@@ -1,0 +1,89 @@
+TODO: <!-- Example 1: In this example, we format 4800 as INR currency string using Intl.NumberFormat with ‘en-IN’ locale, currency style, and minimumFractionDigits set to 2. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Formatting number in currency string
+    </title>
+</head>
+
+<body>
+    <h4>
+        Formatting 4800 as INR
+    </h4>
+    <script>
+        let format = new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+            minimumFractionDigits: 2,
+        });
+        // for 4800 INR
+        document.write(format.format(4800));
+    </script>
+</body>
+
+</html>
+
+<!-- TODO: Example 2: In this example we demonstrates formatting numbers as currency strings in JavaScript, using ‘en-IN’ for INR currency and ‘en-US’ for USD, applying Intl.NumberFormat to spans with specific classes.-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width,
+                   initial-scale=1">
+    <title>Currency format</title>
+    <!-- jQuery CDN -->
+    <script src=
+"https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity=
+"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+        crossorigin="anonymous">
+        </script>
+    <!-- End of CDN -->
+</head>
+
+<body>
+
+    <h4>
+        Format numbers as currency string in JavaScript
+    </h4>
+    <b>Example 1: Locale: 'en-IN' Currency: 'INR'</b>
+    <p>Course ABC Fees: 783984.356 (Formatting Not Used)</p>
+    <p>Course ABC Fees:
+        <span class="currency-inr">783984.356</span>
+        (Formatting Used)
+    </p>
+
+    <b>Example 2: Locale: 'en-US' Currency: 'USD'</b>
+    <p>Course ABC Fees: 783984.356 (Formatting Not Used)</p>
+    <p>Course ABC Fees:
+        <span class="currency-usd">783984.356</span>
+        (Formatting Used)
+    </p>
+
+    <script type="text/javascript">
+        $('.currency-inr').each(function () {
+            var monetary_value = $(this).text();
+            var i = new Intl.NumberFormat('en-IN', {
+                style: 'currency',
+                currency: 'INR'
+            }).format(monetary_value);
+            $(this).text(i);
+        });
+        $('.currency-usd').each(function () {
+            var monetary_value = $(this).text();
+            var i = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            }).format(monetary_value);
+            $(this).text(i);
+        });
+    </script>
+</body>
+
+</html>

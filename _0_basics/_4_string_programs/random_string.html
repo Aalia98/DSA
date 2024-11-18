@@ -1,0 +1,63 @@
+<!-- TODO: Using random number generator -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>String Generator</title>
+</head>
+
+<body>
+    <h2>Random String Generator</h2>
+    <h4 id="target"></h4>
+    <input id="strlength" type="number" value="5" min="1" max="100" />
+    <button id="gen" onClick="generate()">Generate</button>
+    
+    <script>
+    function generate() {
+        let length = document.getElementById("strlength").value;
+        const characters = 'abcdefghijklmnopqrstuvwxyz';
+        let result = ' ';
+        const charactersLength = characters.length;
+        for(let i = 0; i < length; i++) {
+            result += 
+            characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        document.getElementById("target").innerHTML = result
+    }
+    </script>
+</body>
+
+</html>
+
+<!-- TODO: Using the String.fromCharCode() -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>String Generator</title>
+</head>
+
+<body>
+    <h2>Random String Generator</h2>
+    <h4 id="target"></h4>
+    <input id="strlength" type="number" value="5" min="1" max="100" />
+    <button id="gen" onClick="generate()">Generate</button>
+    
+    <script>
+    function generate() {
+        let length = document.getElementById("strlength").value;
+        let result = ' ';
+        for(let i = 0; i < length; i++) {
+            result += 
+            String.fromCharCode(97 + Math.floor(Math.random() * 26));
+        }
+        document.getElementById("target").innerHTML = result
+    }
+    </script>
+</body>
+
+</html>
