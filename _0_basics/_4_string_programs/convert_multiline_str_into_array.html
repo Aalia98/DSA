@@ -1,0 +1,82 @@
+<!-- TODO: Example 1: This example shows the use of the above approach. In this, when we will click on the “Go” button the array of the multiline string will be displayed on the screen separated by “,”. -->
+
+<h1 style="color:green">
+	Welcome to Geeks for Geeks
+</h1>
+<h3>
+	Split multiline string into an array of lines in JavaScript
+</h3>
+<button onclick="myFunction()">
+	Go
+</button>
+
+<p id="StringToArray"></p>
+
+<script>
+	function myFunction() {
+		var string = "Are you ready?" 
+			+ "<br>So let's get started";
+	
+		var array = string.split("<br>");
+	
+		document.getElementById("StringToArray")
+			.innerHTML = array;
+	}
+</script>
+
+<!-- TODO:  Example 2: Now, let’s see how to get a particular index of an array.-->
+
+<h1 style="color:green">
+	Welcome to Geeks for Geeks
+</h1>
+<h3>
+	Split multiline string into an array of lines in JavaScript
+</h3>
+
+<button onclick="myFunction()">Go</button>
+
+<p id="StringToArray"></p>
+
+<script>
+	function myFunction() {
+		var string = "Are you ready?" 
+			+ "<br>So let's get started";
+	
+		var array = string.split("<br>");
+	
+		document.getElementById("StringToArray")
+			.innerHTML = array[1];
+	}
+</script>
+
+<!-- TODO: Example 3: Now, let’s try to take a string as user input. -->
+
+<h1 style="color:green">
+	Welcome to Geeks for Geeks
+</h1>
+<h3>
+	split multiline string into an
+	array of lines in JavaScript
+</h3>
+
+<textarea id="write" placeholder="Write something"
+		style="height:100px;">
+</textarea>
+
+<button onclick="myFunction()">Go</button>
+
+<p id="StringToArray"></p>
+
+
+<script>
+	function myFunction() {
+	
+		var string = document
+			.getElementById("write").value;
+	
+		var array = string.split(".");
+	
+		document.getElementById("StringToArray")
+			.innerHTML = array;
+	}
+</script>
