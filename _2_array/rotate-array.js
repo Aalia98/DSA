@@ -15,6 +15,21 @@ var rotate = function(nums, k) {
     return nums;
 };
 
+// brute force
+var rotate = function(nums, k) {
+    const n = nums.length;
+    let j = 0;
+    if(n === 0) return;
+
+    while(j < k) {
+    for(let i = n-1; i > 0; i--) {
+    [nums[i], nums[i-1]] = [nums[i-1], nums[i]];
+    }
+    j++;
+    }
+    return nums;
+}
+
 // optimize or reversing approach
 var rotate = function(nums, k) {
     const len = nums.length;
